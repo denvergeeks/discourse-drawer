@@ -1,0 +1,13 @@
+url:
+  type: string
+  default: "https://example.com"
+  description: "Internal (relative url) or External web page URL to open in the Discourse Drawer."
+music_player_icon:
+  type: string
+  default: "inbox"
+  description: "Icon for the Discourse Drawer TC Button."
+svg_icons: 
+  default: "inbox"
+  type: "list"
+  list_type: "compact"
+  description: "List of FontAwesome 5 icons used in this theme component"
