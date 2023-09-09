@@ -1,0 +1,3 @@
+.below-footer-outlet.sc-music-player .music-player:not(.open) button.toggle-sc-player {
+  transform: translateY(calc(-250% - env(safe-area-inset-bottom)));
+}
