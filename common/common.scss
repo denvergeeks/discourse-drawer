@@ -1,0 +1,103 @@
+.below-footer-outlet.sc-music-player {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  
+  .desktop-view body.has-sidebar-page & {
+    justify-content: flex-end;
+  }
+  
+  .music-player {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    max-width: calc(var(--d-max-width) - 2em);
+    
+  /* JEN CHANGED */
+        /* max-height: 80svh; */
+    max-height: calc(100% - 10em);
+    
+  /* JEN CHANGED */
+    width: -moz-available;
+    width: -webkit-fill-available;
+    
+    height: 100%;
+    background: var(--primary-low);
+    box-shadow: var(--shadow-card);
+    border-top-right-radius: 3px;
+    padding-bottom: env(safe-area-inset-bottom);
+    transform: translateY(100%);
+    z-index: 300;
+    
+    .desktop-view body.has-sidebar-page & {
+      left: var(--d-sidebar-width);
+    }
+    
+    .desktop-view body.sidebar-animate & {
+      opacity: 0;
+    }
+    
+    .desktop-view body:not(.sidebar-animate) & {
+      opacity: 1;
+      transition: transform 0.25s ease, opacity var(--d-sidebar-animation-time);
+    }
+    
+    .mobile-view & {
+      max-width: calc(100% - 20px);
+      transition: transform 0.25s ease;
+    }
+    
+    &.open {
+      transform: translateY(0);
+      button.toggle-sc-player {
+        transform: translateY(-100%);        
+      }
+      
+      .d-icon-angle-up {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:not(.open) {
+      button.toggle-sc-player {
+        transform: translateY(calc(-100% - env(safe-area-inset-bottom)));
+        transition: transform linear 0.1s;
+        // Footer Nav
+        body.footer-nav-visible:not(.footer-nav-ipad) & {
+          transform: translateY(calc(-100% - var(--footer-nav-height) - env(safe-area-inset-bottom)));
+        }
+      }
+    }
+    
+    button.toggle-sc-player {
+      .mobile-view & {
+        &:hover {
+          background: var(--primary-low);
+          color: var(--primary);     
+          .d-icon {
+            color: var(--primary-high);
+          }
+        }
+      }
+    }
+    
+    iframe#sc-widget {
+      width: 100%;
+      height: 100%;
+      margin-top: -35px;
+    }
+  }
+}
+
+/* JEN ADDED */
+.below-footer-outlet.sc-music-player button.toggle-sc-player {
+  background: rgb(0 135 64) !important;
+  color: #fff !important;
+}
+.below-footer-outlet.sc-music-player button.toggle-sc-player .d-icon {
+  color: #fff !important;
+  fill: #fff !important;
+}
