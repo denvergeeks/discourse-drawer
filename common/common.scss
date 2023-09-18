@@ -54,7 +54,7 @@
       transform: translateY(0);
       button.toggle-sc-player {
         transform: translateY(-100%);
-        border: 5px solid green;
+        border: 5px solid rgb(0 135 64) !important;
       }
       
       .d-icon-angle-up {
@@ -97,7 +97,7 @@
 .below-footer-outlet.sc-music-player button.toggle-sc-player {
   background: rgb(0 135 64) !important;
   color: #fff !important;
-  margin-bottom: 1px;
+  margin-bottom: 1px !important;
 }
 .below-footer-outlet.sc-music-player button.toggle-sc-player .d-icon {
   color: #fff !important;
