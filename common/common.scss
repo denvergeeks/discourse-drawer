@@ -1,7 +1,6 @@
 .below-footer-outlet.sc-music-player {
   display: flex;
   justify-content: center;
-  /* height: 45px; */
   
   .desktop-view body.has-sidebar-page & {
     justify-content: flex-end;
@@ -31,7 +30,7 @@
     padding-bottom: env(safe-area-inset-bottom);
     transform: translateY(100%);
     z-index: 300;
-            border: 5px solid rgb(0 135 64) !important;
+    border: 5px solid rgb(0 135 64) !important;
     
     .desktop-view body.has-sidebar-page & {
       left: var(--d-sidebar-width);
