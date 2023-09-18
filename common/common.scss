@@ -89,6 +89,7 @@
     iframe#sc-widget {
       width: 100%;
       height: 100%;
+      margin-top: -4px;
     }
   }
 }
@@ -98,7 +99,7 @@
   background: rgb(0 135 64) !important;
   color: #fff !important;
   margin-bottom: -34px;
-  /* padding: 0.5em 0.65em; */
+  padding: 0.5em 0.65em 0.8em;
 }
 .below-footer-outlet.sc-music-player button.toggle-sc-player .d-icon {
   color: #fff !important;
