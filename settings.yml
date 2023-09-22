@@ -1,6 +1,6 @@
 url:
   type: string
-  default: "https://example.com"
+  default: "https://denvergeeks-discourse.gitbook.io/discourse-new-user-guide/"
   description: "Internal (relative url) or External web page URL to open in the Discourse Drawer."
 music_player_icon:
   type: string
